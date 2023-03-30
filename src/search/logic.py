@@ -36,9 +36,9 @@ def get_lemmas(tokens: set) -> dict:
 
 
 
-def search_files(self, query):
-    query_lemmas = self.get_lemmas(query)
-    query_vector = self.get_query_vector(query_lemmas)
-    return self.get_similarities(list(query_vector.values()))
+def search_files(query):
+    query_lemmas = get_lemmas(query)
+    query_vector = get_query_vector(query_lemmas)
+    return get_similarities(list(query_vector.values()))
 
 
