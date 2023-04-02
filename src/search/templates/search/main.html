@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>True google</title>
+    <title>My Search</title>
 </head>
 <body>
     <form action="/search">
-        <input type="text" name="query" value={{ query }}/>
+        <input type="text" name="search" value="{{ search }}" />
         <input type="submit" value="Найти"/>
     </form>
-    {% for file in files %}
-        <a href="/page?page=${}"></a>
+    <br>
+    {% for link in links %}
+        <p><a href="{{ link }}" target="_blank">{{ link }}</a></p>
     {% endfor %}
 </body>
 </html>
